@@ -85,10 +85,56 @@ body.open .sidebar {
     opacity: 0;
     transition: all .4s;
     width: 50px;
-    margin-left: 5px;
+    margin-left: 55px;
 }
 
 body.open .sidebar-logo {
+    opacity: 1;
+    transition: all .4s;
+}
+.sidebar-menu {
+    display: grid;
+}
+.sidebar-menu >button {
+    display: flex;
+    gap:12px;
+    align-items: center;
+    height: 55px;
+    font-family: "Ubuntu";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding: 0 22px;
+    border-left:3px solid transparent;
+    transition: all .4s;
+}
+
+.sidebar-menu >button:hover {
+    border-left: 3px solid #f9f9f9;
+}
+.sidebar-menu > button.has-border {
+    padding-bottom:1rem ;
+    border-bottom: 1px solid rgba(255,255,255, .12);
+    margin-bottom: 1rem;
+}
+
+.sidebar-menu >button > i {
+    font-size: 25px;
+    color:#f9f9f9;
+    transition: all .4s;
+}
+
+.sidebar-menu > button:hover >i, .sidebar-menu > button:hover >span {
+    color:#bdbdbd;
+}
+.sidebar-menu >button >span {
+    color:#f9f9f9;
+    opacity: 0;
+    transition: all .4s;
+}
+body.open .sidebar-menu >button >span {
+    
     opacity: 1;
     transition: all .4s;
 }

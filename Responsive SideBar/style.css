@@ -62,13 +62,6 @@ body.open .sidebar {
     place-items: center;
 }
 
-
-
-.sidebar-header>img {
-   
-
-}
-
 .sidebar-burger > i, body.open .sidebar-burger > i {
     font-size: 25px;
     color:#f9f9f9;

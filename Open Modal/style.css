@@ -4,6 +4,55 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    font-family: "Poppins", "Helvetica Neue";
+    width: 100%;
+    background:#525151;
+}
+
+.button {
+    position: absolute;
+    top:50%;
+    left:50%;
+    translate: -50% -50%;
+    border: none;
+    background: rgba(0,0,0,0.5);
+    width: 150px;
+    height: 60px;
+    border-radius: 6px;
+    font-size: 16px;
+    color:aliceblue;
+    font-family: inherit;
     
+}
+
+body.open  {
+    background: #141414;
+    transition: all 1s;
+}
+body.open .button {
+    display: none;
+}
+
+.modal-overlay {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 380px;
+    padding: 30px;
+    border-radius: 10px;
+    background: #14141450;
+    text-align: center;
+    color: aliceblue;
+    visibility: hidden;
+}
+
+body.open .modal-overlay{
+    visibility: visible;
+    z-index: 3;
 }

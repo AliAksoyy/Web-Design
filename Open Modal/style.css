@@ -1,59 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
 
-* {
-    box-sizing: border-box;
-}
 
-html {
+html,body {
     height: 100%;
 }
 
 body {
-    font-family: "Poppins", "Helvetica Neue";
-    width: 100%;
-    background:#525151;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#37353b;
+
 }
 
-.button {
-    position: absolute;
-    top:50%;
-    left:50%;
-    translate: -50% -50%;
-    border: none;
-    background: rgba(0,0,0,0.5);
-    width: 150px;
-    height: 60px;
-    border-radius: 6px;
-    font-size: 16px;
-    color:aliceblue;
+button {
     font-family: inherit;
-    
+    cursor: pointer;
+    background:#1a1a1a;
+    border: 0;
+    border-radius: 7px;
+    color: #f9f9f9;
+    padding: 20px 36px;
+    font-size: 16px;
 }
 
-body.open  {
-    background: #141414;
-    transition: all 1s;
-}
-body.open .button {
-    display: none;
+.modal-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    visibility: hidden;
+    background-color:rgba(0,0,0,0.5);
+    transition: all 0.5s;
 }
 
-.modal-overlay {
-    position:absolute;
+body.open .modal-back {
+    visibility: visible;
+    opacity: 1;
+    animation: background-in 1s both ;
+}
+
+.modal {
+    position: fixed;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    width: 380px;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    color: aliceblue;
+    color:#f9f9f9;
+    background: #37353b;
+    padding: 48px 40px;
+    border-radius: 12px;
+    width: 300px;
+    opacity: 0;
     visibility: hidden;
-    border: 2px solid red;
+    scale: (1,1);
+    transition: all 0.5s;
 }
 
-body.open .modal-overlay{
+body.open .modal {
+    opacity: 1;
     visibility: visible;
-    z-index: 3;
-    background: #5a595950;
+    animation: modal-in 1s;
+}
+
+body.closed .modal {
+    opacity: 0;
+    visibility: hidden;
+    translate: -50% -50%;
+}
+
+h2 {
+    margin: 0 0 8px;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+p {
+    color: rgba(255,255,255,0.5);
+    margin: 0;
+}
+
+@keyframes background-in {
+
+    0% {
+        scale:0 0;
+    }
+    33% {
+        scale: 1 0.005;
+    }
+    66%,100% {
+        scale: 1 1;
+    }
+
+}
+
+@keyframes modal-in {
+    0%,66% {
+        opacity: 0;
+        visibility: hidden;
+        translate: -50% -30%;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
 }

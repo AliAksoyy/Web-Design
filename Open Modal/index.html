@@ -9,14 +9,23 @@
 </head>
 <body>
     <button type="button" class="button" onclick="toggleOpenMenu()">Open Modal</button>
-    <div class="modal-background" onclick="toggleOpenMenu()"></div>
+    <div class="modal-back" onclick="toggleOpenMenu()"></div>
     <div class="modal">
             <h2>Modal Window</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore fugiat maxime incidunt veniam? Eos nulla, ipsam placeat suscipit quisquam itaque qui..</p>
     </div>
    
     <script>
-        const toggleOpenMenu = () => document.body.classList.toggle("open");
+        const toggleOpenMenu = () => {
+            const bodyClassList = document.body.classList;
+            if(bodyClassList.contains("open")) {
+                bodyClassList.remove("open");
+                bodyClassList.add("closed");
+            }else {
+                bodyClassList.remove("closed");
+                bodyClassList.add("open");
+            }
+        }
     </script>
 </body>
 </html>

@@ -8,13 +8,13 @@
     <title>Open Modal</title>
 </head>
 <body>
-    <div class="modal-overlay" onclick="toggleOpenMenu()">
-        <div class="open-modal">
-            <h3 class="modal-title">Modal Window</h3>
-            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore fugiat maxime incidunt veniam? Eos nulla, ipsam placeat suscipit quisquam itaque qui. Incidunt iure aliquid in aut voluptatem! Eveniet ad nisi delectus est perferendis eius iusto alias architecto quasi, temporibus dolorum.</h5>
-        </div>
-    </div>
     <button type="button" class="button" onclick="toggleOpenMenu()">Open Modal</button>
+    <div class="modal-background" onclick="toggleOpenMenu()"></div>
+    <div class="modal">
+            <h2>Modal Window</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore fugiat maxime incidunt veniam? Eos nulla, ipsam placeat suscipit quisquam itaque qui..</p>
+    </div>
+   
     <script>
         const toggleOpenMenu = () => document.body.classList.toggle("open");
     </script>

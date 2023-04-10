@@ -46,13 +46,14 @@ body.open .button {
     width: 380px;
     padding: 30px;
     border-radius: 10px;
-    background: #14141450;
     text-align: center;
     color: aliceblue;
     visibility: hidden;
+    border: 2px solid red;
 }
 
 body.open .modal-overlay{
     visibility: visible;
     z-index: 3;
+    background: #5a595950;
 }

@@ -18,7 +18,6 @@ body{
 .container{
     margin: 0 auto;
     max-width: 34rem;
-    border: 2px solid red;
     width: 90%;
 
 
@@ -38,5 +37,74 @@ input::placeholder{
 
 }
 
+label{
+    display: block;
+}
+
+.card{
+    background-color:#171a1c;
+    border-radius: 14px;
+    color: #bebebe;
+    padding: 30px;
+
+}
+
+.header{
+        margin-bottom: 7rem;
+    }
+
+    .title{
+        color:#fff;
+        float: left;
+        font-size: 1.5rem;
+    }
+
+
+.logo{
+    float: right;
+}
+
+.row{
+    margin-bottom: 1.5rem;
+}
+.content{
+    margin-bottom: 5rem;
+
+}
+.content input {
+    outline: none;
+}
+
+.card-number {
+    font-size: 32px;
+   
+}
+
+.card-expire{
+    float: left;
+}
+
+.card-expire input {
+    font-size: 0.9rem;
+}
+
+
+.card-expire-month{
+    width: 22%;
+
+}
+.card-expire-month, .card-expire-year{
+    float: left;
+}
+
+.card-cvv{
+    float: right;
+}
+
+.card-cvv input {
+    width: 2rem;
+    text-align: center;
+    font-size:0.9rem ;
+}
 
 

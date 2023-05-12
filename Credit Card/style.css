@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background:#f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 34rem;
+    border: 2px solid red;
+    width: 90%;
+
+
+}
+
+input{
+    background-color: transparent;
+    border: none !important;
+    font: inherit !important;
+    color: #fff;
+    width: auto;
+
+}
+
+input::placeholder{
+    color:#fff;
+
+}
+
+
+
